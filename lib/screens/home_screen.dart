@@ -1,7 +1,7 @@
-import 'package:cfc_dang_day2/participant_view.dart';
-import 'package:cfc_dang_day2/recipe_menu_screen.dart';
+import 'package:cfc_dang_day2/screens/participant_view.dart';
+import 'package:cfc_dang_day2/screens/recipe_menu_screen.dart';
 import 'package:flutter/material.dart';
-import './participant_data.dart';
+import '../data/participant_data.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

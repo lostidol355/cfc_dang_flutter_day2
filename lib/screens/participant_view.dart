@@ -1,4 +1,5 @@
-import 'package:cfc_dang_day2/recipe_menu_screen.dart';
+import 'package:cfc_dang_day2/screens/recipe_menu_screen.dart';
+import 'package:cfc_dang_day2/screens/stful_demo.dart';
 import 'package:flutter/material.dart';
 
 class ParticipantView extends StatelessWidget {
@@ -17,7 +18,12 @@ class ParticipantView extends StatelessWidget {
           //  box for image
 
           Container(
-            child: Image(image: AssetImage(pic)),
+            child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => StfulDemo()));
+                },
+                child: Image(image: AssetImage(pic))),
           ),
 
           Text("Student Name: $name  "),
