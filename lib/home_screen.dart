@@ -39,9 +39,57 @@ class HomeScreen extends StatelessWidget {
               Container(height: 100, width: 100, color: Colors.green),
               Container(height: 50, width: 50, color: Colors.indigo),
             ],
+          ),
+          Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    height: 200,
+                    width: 150,
+                    // decoration: BoxDecoration(border: Border.all()),
+                    child: Image(
+                      image: AssetImage(
+                        "assets/images/bibek.jpg",
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    height: 200,
+                    width: 150,
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [
+                          Colors.black.withOpacity(0.7),
+                          Colors.white,
+                        ])),
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+                  Text("1. Omelet Recipes"),
+                  Row(
+                    children: [Icon(Icons.book), Text("17 recipes")],
+                  )
+                ],
+              )
+            ],
           )
         ],
       ),
+
       // body: ListView(
       //     children: List.generate(
       //         participantsName.length,
