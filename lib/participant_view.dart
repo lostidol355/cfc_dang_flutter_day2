@@ -1,3 +1,4 @@
+import 'package:cfc_dang_day2/recipe_menu_screen.dart';
 import 'package:flutter/material.dart';
 
 class ParticipantView extends StatelessWidget {
@@ -19,7 +20,20 @@ class ParticipantView extends StatelessWidget {
             child: Image(image: AssetImage(pic)),
           ),
 
-          Text("Student Name: $name  ")
+          Text("Student Name: $name  "),
+
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => RecipeMenuScreen()));
+            },
+            child: Container(
+              height: 100,
+              width: 150,
+              color: Colors.indigo,
+              child: Text(" Click me to go to next screen"),
+            ),
+          )
 
           // text for name
         ],
@@ -27,3 +41,6 @@ class ParticipantView extends StatelessWidget {
     );
   }
 }
+
+
+// https://www.youtube.com/@Tech101Nepal/videos
