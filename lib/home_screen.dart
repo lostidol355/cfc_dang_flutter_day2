@@ -77,13 +77,31 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Column(
-                children: [
-                  Text("1. Omelet Recipes"),
-                  Row(
-                    children: [Icon(Icons.book), Text("17 recipes")],
-                  )
-                ],
+              Positioned(
+                left: 10,
+                bottom: 10,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "1. Omelet Recipes",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.book,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "17 recipes",
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               )
             ],
           )
