@@ -2,6 +2,7 @@ import 'package:cfc_dang_day2/screens/participant_view.dart';
 import 'package:cfc_dang_day2/screens/recipe_menu_screen.dart';
 import 'package:flutter/material.dart';
 import '../data/participant_data.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -132,10 +133,9 @@ class HomeScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => ParticipantView(
-                                  name: participantsName[index]['name'],
-                                  pic: participantsName[index]['pic'],
-
-                                )));
+                                      name: participantsName[index]['name'],
+                                      pic: participantsName[index]['pic'],
+                                    )));
                       },
                       leading: CircleAvatar(
                         radius: 30,
@@ -144,8 +144,21 @@ class HomeScreen extends StatelessWidget {
                         // backgroundColor: Colors.red,
                         // child: Text("${index + 1}. "),
                       ),
-                      title: Text(participantsName[index]['name']),
-                      subtitle: const Text("Yo i am subtitle"),
+                      title: Text(
+                        participantsName[index]['name'],
+                        style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                          fontSize: 20,
+                          // fontWeight: FontWeight.bold,
+                        )),
+                      ),
+                      subtitle: Text(
+                        "Yo i am subtitle",
+                        style: GoogleFonts.balooPaaji2(
+                            // textStyle: TextStyle()
+
+                            ),
+                      ),
                     ),
                     // child: Container(
                     //   height: 100,

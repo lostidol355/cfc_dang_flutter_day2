@@ -25,13 +25,20 @@ class _StfulDemoState extends State<StfulDemo> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
+                  keyboardType: TextInputType.number,
                   onChanged: (userContent) {
                     setState(() {
                       boxText = userContent;
                     });
                   },
                   controller: _nameController,
-                  decoration: InputDecoration(label: Text("Name"))),
+                  decoration: InputDecoration(
+                      label: Text("Name"),
+                      hintText: "Enter your name",
+                      helperText: "Please enter your name and surname",
+                      // border
+
+                      border: OutlineInputBorder())),
             ),
             ElevatedButton(
                 onPressed: () {
